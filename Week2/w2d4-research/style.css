@@ -1,0 +1,131 @@
+/*// BASE STYLES //*/
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+.grass,
+.sky,
+.road {
+	position: relative;
+}
+
+.sky {
+	display: flex;
+	align-content: space-between;
+	height: 40%;
+	background: skyblue;
+}
+
+.grass {
+	height: 30%;
+	background: seagreen;
+}
+
+.road {
+	height: 30%;
+	background: dimgrey;
+	box-sizing: border-box;
+	border-top: 10px solid grey;
+	border-bottom: 10px solid grey;
+	width: 100%;
+}
+
+.lines {
+	box-sizing: border-box;
+	border: 5px dashed #fff;
+	height: 0px;
+	width: 100%;
+	position: absolute;
+	top: 45%;
+}
+.car {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+}
+/*// ELEMENTS TO ANIMATE //*/
+#green {
+	left: -34px;
+	top: 100px;
+	width: 300px;
+	height: 200px;
+	animation-name: drive;
+	animation-duration: 7s;
+	/* animation-iteration-count: infinite; */
+}
+#white {
+	left: 40px;
+	animation-name: drive;
+	animation-duration: 10s;
+	/* animation-iteration-count: infinite; */
+}
+#cloud {
+	width: 10%;
+	align-self: flex-start;
+	animation: cloudMove 15s infinite;
+	/* animation-name: cloudMove;
+	animation-duration: 15s; */
+}
+#cloudR {
+	width: 20%;
+	height: 30%;
+	animation: cloudMoveReverse 15s infinite;
+	/* animation-name: cloudMoveReverse;
+	animation-duration: 15s; */
+}
+/*// KEYFRAMES //*/
+@keyframes drive {
+	0% {
+		transform: translateX(0vw);
+	}
+	/* 25% {
+		transform: translateX(30vw);
+	}
+	50% {
+		transform: translateX(60vw);
+	}
+	75% {
+		transform: translateX(70vw);
+	} */
+	100% {
+		transform: translateX(100vw);
+	}
+}
+
+@keyframes cloudMove {
+	0% {
+		transform: translateX(0vw);
+	}
+	50% {
+		transform: translateX(100vw);
+	}
+	100% {
+		transform: translateX(0vw);
+	}
+}
+
+@keyframes cloudMoveReverse {
+	0% {
+		transform: translateX(100vw);
+	}
+	100% {
+		transform: translateX(0vw);
+	}
+}
+
+@keyframes example {
+	from {
+		top: 0px;
+	}
+	50% {
+		top: 100px !important;
+	} /* ignored */
+	to {
+		top: 200px;
+	}
+}

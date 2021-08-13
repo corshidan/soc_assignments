@@ -1,0 +1,29 @@
+body {
+	background: linear-gradient(
+		to right,
+		#f7797d,
+		#fbd786,
+		#c6ffdd
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* {
+	font-family: 'Indie Flower', cursive;
+}
+body {
+	margin: auto;
+	align-content: center;
+	text-align: center;
+	width: 60%;
+	padding: 10vw;
+}
+form {
+	margin: auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+section {
+	text-align: start;
+}
